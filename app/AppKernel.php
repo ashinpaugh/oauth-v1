@@ -9,13 +9,8 @@ class AppKernel extends Kernel
     {
         $bundles = [
             new Symfony\Bundle\FrameworkBundle\FrameworkBundle(),
-            new Doctrine\Bundle\DoctrineBundle\DoctrineBundle(),
             new \Moop\Bundle\OAuthBundle\MoopOAuthBundle(),
         ];
-
-        if (in_array($this->getEnvironment(), ['dev', 'test'], true)) {
-            $bundles[] = new Sensio\Bundle\GeneratorBundle\SensioGeneratorBundle();
-        }
 
         return $bundles;
     }
