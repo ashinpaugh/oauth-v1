@@ -1,0 +1,16 @@
+parameters:
+    http.client.class:  Buzz\Client\Curl
+    http.browser.class: Buzz\Browser
+
+services:
+    buzz.client.curl:
+        class: "%http.client.class%"
+    
+    buzz.browser:
+        class: "%http.browser.class%"
+        arguments: ["@buzz.client.curl"]
+    
+    moop.oauth.version_one:
+        class:     Moop\Bundle\OAuthBundle\Util\AuthConsumer
+        arguments: ["@buzz.browser"]
+    
