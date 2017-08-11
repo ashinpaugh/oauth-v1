@@ -1,3 +1,0 @@
-moop_oauth:
-    resource: "@MoopOAuthBundle/Resources/config/routing.yml"
-    prefix:   /

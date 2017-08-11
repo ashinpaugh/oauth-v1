@@ -9,7 +9,7 @@ class AppKernel extends Kernel
     {
         $bundles = [
             new Symfony\Bundle\FrameworkBundle\FrameworkBundle(),
-            new \Moop\Bundle\OAuthBundle\MoopOAuthBundle(),
+            new Moop\Bundle\OAuthBundle\MoopOAuthBundle(),
         ];
 
         return $bundles;
@@ -32,6 +32,6 @@ class AppKernel extends Kernel
 
     public function registerContainerConfiguration(LoaderInterface $loader)
     {
-        $loader->load($this->getRootDir().'/config/config_'.$this->getEnvironment().'.yml');
+        $loader->load($this->getRootDir().'/config/config.yml');
     }
 }
